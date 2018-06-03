@@ -16,4 +16,6 @@ class Articles(models.Model):
     def snippet(self):
         return self.body[:50]+'...'
 
-    #hiiii
+#hiiiijjjj
+    def hi(self):
+        print(self)
