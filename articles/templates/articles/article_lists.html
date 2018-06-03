@@ -1,0 +1,25 @@
+ {% load static from staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Article List</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+<h1>Article List</h1>
+<center>
+<div class="articles">
+    {%for i in articles %}
+    <div class="article">
+        <h2><a href="/articles/art/{{i.id}}">{{i.tittle}}</a></h2>
+        <p>{{i.slug}}</p>
+        <p>{{i.snippet}}</p>
+        <p>{{i.date}}</p>
+    </div>
+    {%endfor%}
+</div>
+    </center>
+</body>
+</html>
