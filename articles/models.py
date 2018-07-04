@@ -8,6 +8,7 @@ class Articles(models.Model):
     slug=models.SlugField()
     body=models.TextField()
     date=models.DateTimeField(auto_now_add=True)
+    thumb=models.ImageField(default='default.png',blank=True)
 
     def __str__(self):
         print("***********",self.tittle)
@@ -16,6 +17,3 @@ class Articles(models.Model):
     def snippet(self):
         return self.body[:50]+'...'
 
-#hiiiijjjj
-    def hi(self):
-        print(self)

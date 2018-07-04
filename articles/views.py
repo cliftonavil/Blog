@@ -1,3 +1,4 @@
+from django.http import HttpResponse
 from django.shortcuts import render
 from.models import Articles
 
@@ -9,3 +10,7 @@ def articles_list(request):
 
 def artii(request):
     return render(request,'articles/artt.html')
+
+def articles_details(request,slug):
+    articles=Articles.objects.get(slug=slug)
+    return render(request,'articles/artile_deatil.html',{'articles':articles})
